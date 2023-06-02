@@ -16,8 +16,61 @@ body {
     height: 50vmin;
     width: 50vmin;
     background: white;
-    border: 1px solid red;
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-lines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-lines div {
+    position: absolute;
+    z-index: 2;
+    background-color: black;
+}
+
+.line1 {
+    height: 100%;
+    width: 10px;
+    left: 33%;
+    transform: translateX(-50%);
+}
+
+.line2 {
+    height: 100%;
+    width: 10px;
+    left: 66%;
+}
+
+.line3 {
+    height: 10px;
+    width: 100%;
+    top: 33%;
+    transform: translateY(-50%);
+}
+
+.line4 {
+    height: 10px;
+    width: 100%;
+    top: 66%;
+}
+
+.grid-container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.grid-item {
+    display: flex;
+    background: white;
     align-items: center;
     justify-content: center;
 }
